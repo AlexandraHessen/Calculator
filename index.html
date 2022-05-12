@@ -2,145 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Calculator</title>
-    <!--Шрифт иконок-->
-    <script src="https://kit.fontawesome.com/3ec1243673.js" crossorigin="anonymous"></script>
-
-    <style>
-        .container {
-            width: 205px;
-            height: 415px;
-            display: flex;
-            flex-direction: column;
-            background-color: #000000;
-            border-radius: 40px;
-            box-shadow: 4px 4px 3px rgba(122, 122, 122, 0.5);
-
-            color: #ffffff;
-            padding: 15px;
-        }
-
-        .scoreboard {
-            height: 170px;
-            font-family: Arial;
-            font-size: 39px;
-            /* font-size: 52px; */
-            display: flex;
-            justify-content: end;
-            align-items: flex-end;
-        }
-
-        .row {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .buttons-container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .buttons {
-            border-radius: 50%;
-            position: relative;
-            top: 4px;
-            cursor: pointer;
-            width: 45px;
-            height: 45px;
-            background: #f9f9f9;
-            margin-bottom: 8px;
-            line-height: 35px;
-            text-align: center;
-            user-select: none;
-            transition: all 250ms ease-out;
-            color: #ffffff;
-            font-size: 16px;
-
-        }
-
-        .buttons:hover {
-            box-shadow: inset 0 0px 37px rgb(255 252 252 / 65%);
-        }
-
-        .first-line {
-            background: #A4A4A4;
-            border: 2px solid #b0afaf;
-            color: #000000;
-            font-weight: bold;
-        }
-
-        .operations {
-            background-color: #FD9E0C;
-            border: 2px solid #feb545;
-
-        }
-
-        .numbers {
-            background-color: #343436;
-            border: 2px solid #3f3f42;
-        }
-
-        .zero {
-            width: 90px;
-            border-radius: 45px;
-            text-align: left;
-            padding-left: 16px;
-        }
-
-        .comma {
-            font-family: cursive;
-            font-size: 21px;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 
 <body>
     <div class="container">
-        <!-- <div class="scoreboard">
-            0.00000000
-        </div> -->
-        <div class="scoreboard">
-            0
+        <div class="currentValueOnScreen">
         </div>
         <div class="buttons-container">
             <div class="row">
-                <button class="first-line buttons">C</button>
-                <button class="first-line buttons"><i class="fa-solid fa-plus-minus"></i></button>
-                <button class="first-line buttons"><i class="fa-solid fa-percent"></i></button>
-                <button class="operations buttons"><i class="fa-solid fa-divide"></i></button>
+                <button class="first-line buttons" name="cleanAll">C</button>
+                <button class="first-line buttons" name="deleteLast">&#11013;</button>
+                <button class="first-line buttons" name="%">%</button>
+                <button class="operations buttons" name="/">&divide;</button>
             </div>
             <div class="row">
-                <button class="numbers buttons">7</button>
-                <button class="numbers buttons">8</button>
-                <button class="numbers buttons">9</button>
-                <button class="operations buttons xmark"><i class="fa-solid fa-xmark"></i></i></button>
+                <button class="numbers buttons" name="7">7</button>
+                <button class="numbers buttons" name="8">8</button>
+                <button class="numbers buttons" name="9">9</button>
+                <button class="operations buttons xmark" name="*">&times;</i></button>
             </div>
             <div class="row">
-                <button class="numbers buttons">4</button>
-                <button class="numbers buttons">5</button>
-                <button class="numbers buttons">6</button>
-                <button class="operations buttons"><i class="fa-solid fa-minus"></i></button>
+                <button class="numbers buttons" name="4">4</button>
+                <button class="numbers buttons" name="5">5</button>
+                <button class="numbers buttons" name="6">6</button>
+                <button class="operations buttons" name="-">-</button>
             </div>
             <div class="row">
-                <button class="numbers buttons">1</button>
-                <button class="numbers buttons">2</button>
-                <button class="numbers buttons">3</button>
-                <button class="operations buttons"><i class="fa-solid fa-plus"></i></button>
+                <button class="numbers buttons" name="1">1</button>
+                <button class="numbers buttons" name="2">2</button>
+                <button class="numbers buttons" name="3">3</button>
+                <button class="operations buttons" name="+">+</button>
             </div>
             <div class="row">
-                <button class="numbers buttons zero">0</button>
-                <button class="numbers buttons comma">,</button>
-                <button class="operations buttons"><i class="fa-solid fa-equals"></i></button>
+                <button class="numbers buttons zero" name="0">0</button>
+                <button class="numbers buttons comma" name=".">,</button>
+                <button class="operations buttons" name="=">=</button>
             </div>
 
         </div>
 
     </div>
-
 </body>
+
+<script src="./script.js"></script>
 
 </html>
