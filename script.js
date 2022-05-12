@@ -101,7 +101,7 @@ class Calculator {
 
 
     addOperation(operation) {
-        if (this.currentValue === "") return;
+        if (this.currentValue === "" && this.previousValue === "") return; 
         if (this.previousValue !== "") {
             this.count();
         };
